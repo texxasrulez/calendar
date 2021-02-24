@@ -167,7 +167,7 @@ class caldav_driver extends calendar_driver
             foreach ($calendars as $calendar)
             {
                 // Skip already existent calendars
-                $result = $this->rc->db->query("SELECT * FROM ".$this->db_calendars." WHERE caldav_url LIKE ?", str_replace('@', '%40', $calendar['href']));
+                $result = $this->rc->db->query("SELECT * FROM ".$this->db_calendars." WHERE user_id=".$ this->rc->user->ID." AND caldav_url LIKE ?", str_replace('@', '%40', $calendar['href']));
                 if($this->rc->db->affected_rows($result)) continue;
                 $cal['caldav_url'] = self::_encode_url($calendar['href']);
 				$cal['editable'] = $calendar['editable'];
