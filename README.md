@@ -1,3 +1,6 @@
+# ARCHIVED. I am using kolabs calendar and it works fine and is activly developed and maintened by several individuals.
+
+
 # Caldav Calendar Plugin for Roundcube & NextCloud
 
 I would really **LOVE** a little help on this project. Tons of lines of code to go through for just one old man.  
