@@ -296,13 +296,18 @@ class kolab_user_calendar extends kolab_calendar
      */
     private function fetch_freebusy($limit_changed = null)
     {
+        $fb_url = kolab_storage::get_freebusy_url($this->userdata['mail']);
+        if (empty($fb_url)) {
+            return 0;
+        }
+
         // ask kolab server first
         try {
             $request_config = [
                 'store_body'       => true,
                 'follow_redirects' => true,
             ];
-            $request  = libkolab::http_request(kolab_storage::get_freebusy_url($this->userdata['mail']), 'GET', $request_config);
+            $request  = libkolab::http_request($fb_url, 'GET', $request_config);
             $response = $request->send();
 
             // authentication required

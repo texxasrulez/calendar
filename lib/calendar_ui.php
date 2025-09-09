@@ -1,4 +1,5 @@
 <?php
+
 /**
  * User Interface class for the Calendar plugin
  *

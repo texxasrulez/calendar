@@ -310,7 +310,7 @@ class calendar extends rcube_plugin
     public function get_default_calendar($calendars = null)
     {
         if ($calendars === null) {
-            $filter    = calendar_driver::FILTER_PERSONAL | calendar_driver::FILTER_WRITEABLE;
+            $filter    = calendar_driver::FILTER_WRITEABLE;
             $calendars = $this->driver->list_calendars($filter);
         }
 
@@ -605,7 +605,7 @@ class calendar extends rcube_plugin
 
             // default calendar selection
             $field_id   = 'rcmfd_default_calendar';
-            $filter     = calendar_driver::FILTER_PERSONAL | calendar_driver::FILTER_ACTIVE | calendar_driver::FILTER_INSERTABLE;
+            $filter     = calendar_driver::FILTER_INSERTABLE;
             $select_cal = new html_select(['name' => '_default_calendar', 'id' => $field_id, 'is_escaped' => true]);
 
             $default_calendar = null;
@@ -1292,7 +1292,7 @@ $("#rcmfd_new_category").keypress(function(event) {
                     $reply_sender = null;
 
                     foreach ($event['attendees'] as $i => $attendee) {
-                        if ($attendee['role'] == 'ORGANIZER') {
+                        if (($attendee['role'] ?? '') == 'ORGANIZER') {
                             $organizer = $attendee;
                         } elseif (!empty($attendee['email']) && in_array_nocase($attendee['email'], $emails)) {
                             $reply_sender = $attendee['email'];
@@ -2410,7 +2410,7 @@ $("#rcmfd_new_category").keypress(function(event) {
             $organizer = $owner = false;
 
             foreach ((array) $event['attendees'] as $i => $attendee) {
-                if ($attendee['role'] == 'ORGANIZER') {
+                if (($attendee['role'] ?? '') == 'ORGANIZER') {
                     $organizer = $i;
                 }
                 if (!empty($attendee['email']) && in_array(strtolower($attendee['email']), $emails)) {
@@ -3670,7 +3670,7 @@ $("#rcmfd_new_category").keypress(function(event) {
             $itip->set_sender_email($reply_sender);
 
             if ($itip->send_itip_message($event, 'REPLY', $organizer, 'itipsubject' . $status, 'itipmailbody' . $status)) {
-                $mailto = $organizer['name'] ? $organizer['name'] : $organizer['email'];
+                $mailto = !empty($organizer['name']) ? $organizer['name'] : $organizer['email'];
                 $msg    = $this->gettext(['name' => 'sentresponseto', 'vars' => ['mailto' => $mailto]]);
                 $this->rc->output->command('display_message', $msg, 'confirmation');
             } else {

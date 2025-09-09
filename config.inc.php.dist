@@ -29,7 +29,7 @@
 $config['calendar_driver'] = "caldav";
 
 // CalDAV server location (required when calendar_driver = caldav)
-$config['calendar_caldav_server'] = "https://www.domain.com/nextcloud/remote.php/dav";
+$config['calendar_caldav_server'] = "https://www.domain.com/cloud/remote.php/dav";
 
 // default calendar view (agendaDay, agendaWeek, month)
 $config['calendar_default_view'] = "month";
@@ -155,4 +155,4 @@ $config['kolab_invitation_calendars'] = false;
 $config['calendar_freebusy_session_auth_url'] = null;
 
 // Nextcloud installation URL (for Talk integration).
-$config['calendar_nextcloud_url'] = 'https://www.domain.com/nextcloud/remote.php/dav';
+$config['calendar_nextcloud_url'] = 'https://www.domain.com/cloud/remote.php/dav';
