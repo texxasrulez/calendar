@@ -140,7 +140,7 @@ $config['kolab_invitation_calendars'] = false;
 // %u - Current webmail user name
 // %n - Calendar name
 // %i - Calendar UUID
-// $config['calendar_caldav_url'] = 'https://calendar.google.com/calendar/ical/email%40gmail.com/private-your_key/basic.ics';
+// $config['calendar_caldav_url'] = 'https://calendar.google.com/calendar/ical/texxasrulez%40gmail.com/private-d7120925ea04fe4032da27cecb474fb2/basic.ics';
 
 // Driver to provide a resource directory ('ldap' is the only implementation yet).
 // Leave empty or commented to disable resources support.
