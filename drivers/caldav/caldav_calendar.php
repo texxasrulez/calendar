@@ -266,7 +266,7 @@ class caldav_calendar extends kolab_storage_dav_folder
             // remember seen categories
             if (!empty($event['categories'])) {
                 $cat = is_array($event['categories']) ? $event['categories'][0] : $event['categories'];
-                $this->categories[$cat]++;
+                $this->categories[$cat] = ($this->categories[$cat] ?? 0) + 1;
             }
 
             // list events in requested time window
