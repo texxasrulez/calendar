@@ -5,7 +5,7 @@ A calendar module for Roundcube
 [![Project license](https://img.shields.io/github/license/texxasrulez/calendar?style=plastic)](https://github.com/texxasrulez/calendar/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/texxasrulez/calendar?style=plastic&logo=github)](https://github.com/texxasrulez/calendar/stargazers)
 [![issues](https://img.shields.io/github/issues/texxasrulez/calendar?style=plastic)](https://github.com/texxasrulez/calendar/issues)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=plastic&logo=paypal)](https://www.paypal.me/texxasrulez)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-money_please-blue.svg?style=plastic&logo=paypal)](https://www.paypal.me/texxasrulez)
 
 
 This plugin currently supports a local database as well as a Kolab groupware
