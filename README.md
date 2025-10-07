@@ -1,12 +1,11 @@
 A calendar module for Roundcube
--------------------------------
 
-[![Packagist](https://img.shields.io/packagist/dt/texxasrulez/calendar?style=flat-square)](https://packagist.org/packages/texxasrulez/calendar)
-[![Packagist Version](https://img.shields.io/packagist/v/texxasrulez/calendar?style=flat-square)](https://packagist.org/packages/texxasrulez/calendar)
-[![Project license](https://img.shields.io/github/license/texxasrulez/calendar?style=flat-square)](https://github.com/texxasrulez/calendar/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/texxasrulez/calendar?style=flat-square&logo=github)](https://github.com/texxasrulez/calendar/stargazers)
+[![Packagist](https://img.shields.io/packagist/dt/texxasrulez/calendar?style=plastic)](https://packagist.org/packages/texxasrulez/calendar)
+[![Packagist Version](https://img.shields.io/packagist/v/texxasrulez/calendar?style=plastic&logo=packagist&logoColor=white)](https://packagist.org/packages/texxasrulez/calendar)
+[![Project license](https://img.shields.io/github/license/texxasrulez/calendar?style=plastic)](https://github.com/texxasrulez/calendar/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/texxasrulez/calendar?style=plastic&logo=github)](https://github.com/texxasrulez/calendar/stargazers)
 [![issues](https://img.shields.io/github/issues/texxasrulez/calendar)](https://github.com/texxasrulez/calendar/issues)
-[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=flat-square&logo=paypal)](https://www.paypal.me/texxasrulez)
+[![Donate to this project using Paypal](https://img.shields.io/badge/paypal-donate-blue.svg?style=plastic&logo=paypal)](https://www.paypal.me/texxasrulez)
 
 
 This plugin currently supports a local database as well as a Kolab groupware
