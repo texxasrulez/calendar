@@ -8,7 +8,6 @@
 		"source": "https://github.com/texxasrulez/calendar"
   },
   "license": "GPL-3.0",
-    "version": "3.6.0",
     "authors": [
         {
             "name": "Thomas Bruederli",
@@ -26,16 +25,14 @@
             "role": "Developer"
         }
     ],
-    "require": {
-        "php": ">=7.2.0",
-        "roundcube/plugin-installer": ">=0.1.3",
-        "texxasrulez/libcalendaring": ">=3.5.3",
-        "texxasrulez/libkolab": ">=3.4.0"
-    },
-     "extra": {
-        "roundcube": {
-            "min-version": "1.6.0",
-            "sql-dir": "drivers/database/SQL"
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://plugins.roundcube.net"
         }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "roundcube/plugin-installer": ">=0.1.4"
     }
 }
