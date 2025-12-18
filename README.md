@@ -13,6 +13,10 @@ A calendar module for Roundcube
 This is a current snapshot of Kolabs latest from their git site.
 I do nothing special to this plugin.
 
+There will be no updates from me, I will only update as Kolab does.
+
+This plugin requires knowledge of Roundcube plugins because this needs a little "finesse" to make work.
+
 This plugin currently supports a local database as well as a Kolab groupware
 server as backends for calendar and event storage. For both drivers, some
 initialization of the local database is necessary. To do so, execute the
