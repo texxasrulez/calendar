@@ -6,6 +6,7 @@
 	"support": {
 		"issues": "https://github.com/texxasrulez/calendar/issues",
 		"source": "https://github.com/texxasrulez/calendar"
+	},
     "license": "AGPLv3",
     "version": "3.6.1",
     "authors": [
