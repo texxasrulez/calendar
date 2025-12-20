@@ -2,7 +2,10 @@
     "name": "texxasrulez/calendar",
     "type": "roundcube-plugin",
     "description": "Calendar plugin",
-    "homepage": "https://git.kolab.org/diffusion/RPK/",
+    "homepage": "https://github.com/texxasrulez/calendar",
+	"support": {
+		"issues": "https://github.com/texxasrulez/calendar/issues",
+		"source": "https://github.com/texxasrulez/calendar"
     "license": "AGPLv3",
     "version": "3.6.1",
     "authors": [
