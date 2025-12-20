@@ -23,8 +23,8 @@
     "require": {
         "php": ">=7.2.0",
         "roundcube/plugin-installer": ">=0.1.3",
-        "kolab/libcalendaring": ">=3.6.1",
-        "kolab/libkolab": ">=3.6.1"
+        "texxasrulez/libcalendaring": ">=3.6.1",
+        "texxasrulez/libkolab": ">=3.6.1"
     },
      "extra": {
         "roundcube": {
