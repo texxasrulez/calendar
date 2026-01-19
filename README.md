@@ -11,9 +11,9 @@ A calendar module for Roundcube
 [![Donate Paypal](https://img.shields.io/badge/Paypal-Money_Please!-blue.svg?style=plastic&labelColor=blue&color=forestgreen&logo=paypal)](https://www.paypal.me/texxasrulez)
 
 This is a current snapshot of Kolabs latest from their git site.
-I do nothing special to this plugin.
+I do nothing special to this plugin except that I added a RoundDAV driver to use with my RoundDAV Suite.
 
-There will be no updates from me, I will only update as Kolab does.
+There will be no edits/updates from me on the core calendar plugin, I will only update as Kolab does.
 
 This plugin requires knowledge of Roundcube plugins because this needs a little "finesse" to make work.
 
