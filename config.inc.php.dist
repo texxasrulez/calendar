@@ -1,4 +1,5 @@
 <?php
+
 /*
  +-------------------------------------------------------------------------+
  | Configuration for the Calendar plugin                                   |
@@ -25,23 +26,23 @@
  +-------------------------------------------------------------------------+
 */
 
-// backend type (database, kolab, caldav)
-$config['calendar_driver'] = 'caldav';
+// backend type (database, kolab, caldav, rounddav)
+$config['calendar_driver'] = "rounddav";
+
+// RoundDAV added config to remove slug URI's
+$config['rounddav_calendar_slug_uri'] = true;
 
 // CalDAV server location (required when calendar_driver = caldav)
-$config['calendar_caldav_server'] = 'https://www.domain.com/rounddav/public/';
-
-// Template for the user's *calendar collection* URL
-$config['calendar_caldav_url'] = 'https://www.domain.com/rounddav/public/calendars/%u/%n/';
+$config['calendar_caldav_server'] = "http://localhost";
 
 // default calendar view (agendaDay, agendaWeek, month)
-$config['calendar_default_view'] = "month";
+$config['calendar_default_view'] = "agendaWeek";
 
 // show a birthdays calendar from the user's address book(s)
-$config['calendar_contact_birthdays'] = true;
+$config['calendar_contact_birthdays'] = false;
 
 // timeslots per hour (1, 2, 3, 4, 6)
-$config['calendar_timeslots'] = 4;
+$config['calendar_timeslots'] = 2;
 
 // show this number of days in agenda view
 $config['calendar_agenda_range'] = 60;
@@ -129,10 +130,10 @@ $config['calendar_include_freebusy_data'] = 1;
 $config['calendar_itip_smtp_server'] = null;
 
 // SMTP username used to send (anonymous) itip messages
-$config['calendar_itip_smtp_user'] = '%u';
+$config['calendar_itip_smtp_user'] = 'smtpauth';
 
 // SMTP password used to send (anonymous) itip messages
-$config['calendar_itip_smtp_pass'] = '%p';
+$config['calendar_itip_smtp_pass'] = '123456';
 
 // show virtual invitation calendars (Kolab driver only)
 $config['kolab_invitation_calendars'] = false;
@@ -143,7 +144,7 @@ $config['kolab_invitation_calendars'] = false;
 // %u - Current webmail user name
 // %n - Calendar name
 // %i - Calendar UUID
-// $config['calendar_caldav_url'] = '';
+// $config['calendar_caldav_url'] = 'http://%h/iRony/calendars/%u/%i';
 
 // Driver to provide a resource directory ('ldap' is the only implementation yet).
 // Leave empty or commented to disable resources support.
@@ -157,26 +158,5 @@ $config['kolab_invitation_calendars'] = false;
 // See freebusy_session_auth in configuration of kolab_auth plugin.
 $config['calendar_freebusy_session_auth_url'] = null;
 
-//Shared Calendar
-// Use CalDAV backend
-// $config['calendar_driver'] = 'caldav';
-/*
-// Preinstalled CalDAV sources (shown/created for every Roundcube user)
-$config['calendar_caldav_preinstalled_sources'] = [
-    // 1) Normal per-user RoundDAV account
-    'RoundDAV' => [
-        'caldav_user' => '%u',  // Roundcube login
-        'caldav_pass' => '%p',  // Roundcube password
-        'caldav_url'  => 'https://www.domain.com/rounddav/public/calendars/%u/',
-        'showAlarms'  => 1,
-    ],
-
-    // 2) Shared / global RoundDAV account (fixed creds)
-    'Shared' => [
-        'caldav_user' => '_global_addressbook@domain.com',  // or _global_calendar@..., etc.
-        'caldav_pass' => '',
-        'caldav_url'  => 'https://www.domain.com/rounddav/public/calendars/_global_addressbook@domain.com/',
-        'showAlarms'  => 1,
-    ],
-];
-*/
+// Nextcloud installation URL (for Talk integration).
+$config['calendar_nextcloud_url'] = null;
