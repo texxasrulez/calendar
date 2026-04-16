@@ -10,7 +10,7 @@
 [![GitHub Forks](https://img.shields.io/github/forks/texxasrulez/calendar?style=plastic&logo=github&logoColor=white&label=Forks&labelColor=blue&color=darkorange)](https://github.com/texxasrulez/calendar/forks)
 [![Donate Paypal](https://img.shields.io/badge/Paypal-Money_Please!-blue.svg?style=plastic&labelColor=blue&color=forestgreen&logo=paypal)](https://www.paypal.me/texxasrulez)
 
-This is not my original plugin. It tracks Kolab's calendar plugin as they release it, and I mainly add and maintain the `rounddav` driver so it integrates cleanly with my RoundDAV Suite of plugins for Roundcube.
+This is not my original plugin. It tracks Kolab's calendar plugin as they release it, and I mainly add and maintain the `rounddav` driver so it integrates cleanly with the RoundDAV Suite of plugins for Roundcube.
 
 ## Overview
 
