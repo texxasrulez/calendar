@@ -17,8 +17,8 @@ class rounddav_utils
         }
 
         $name = (string) $name;
-        $hash = crc32($name);
-        $idx  = (int) ($hash % count($palette));
+        $hash = (int) sprintf('%u', crc32($name));
+        $idx  = $hash % count($palette);
         $color = (string) $palette[$idx];
 
         $color = ltrim($color, '#');

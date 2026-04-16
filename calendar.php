@@ -33,6 +33,8 @@
 #[AllowDynamicProperties]
 class calendar extends rcube_plugin
 {
+    public $version = '3.6.1';
+
     public const FREEBUSY_UNKNOWN   = 0;
     public const FREEBUSY_FREE      = 1;
     public const FREEBUSY_BUSY      = 2;

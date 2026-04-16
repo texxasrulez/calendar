@@ -752,7 +752,7 @@ abstract class calendar_driver
 
                     // if this is not the first occurence modify event details
                     // but not when this is "all birthdays feed" request
-                    if ($year2 - $year < 10 && ($age = ($this_year - $byear))) {
+                    if ($event['start']->_has_year && $year2 - $year < 10 && ($age = ($this_year - $byear))) {
                         $label = ['name' => 'birthdayage', 'vars' => ['age' => $age]];
 
                         $event['description'] = $rcmail->gettext($label, 'calendar');
@@ -816,7 +816,7 @@ abstract class calendar_driver
         }
 
         try {
-            $bday = libcalendaring_datetime::createFromAny($contact['birthday'], true);
+            $bday = libcalendaring_datetime::createFromBirthday($contact['birthday']);
         } catch (Exception $e) {
             rcube::raise_error(
                 [

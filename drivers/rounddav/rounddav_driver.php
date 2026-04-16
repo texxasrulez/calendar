@@ -162,10 +162,20 @@ class rounddav_driver extends kolab_driver
         }
 
         if ($url === '') {
-            $url = 'http://localhost';
-        } else {
-            $url = rtrim($url, '/') . '/';
+            rcube::raise_error(
+                [
+                    'code' => 600,
+                    'file' => __FILE__,
+                    'line' => __LINE__,
+                    'message' => "RoundDAV calendar driver misconfiguration: set 'calendar_caldav_server' or 'rounddav_base_url'.",
+                ],
+                true,
+                false
+            );
+            throw new RuntimeException("RoundDAV calendar driver misconfiguration: missing 'calendar_caldav_server'/'rounddav_base_url'.");
         }
+
+        $url = rtrim($url, '/') . '/';
 
         $this->storage = new rounddav_storage_dav($url);
 
