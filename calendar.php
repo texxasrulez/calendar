@@ -33,7 +33,16 @@
 #[AllowDynamicProperties]
 class calendar extends rcube_plugin
 {
-    public $version = '3.6.1';
+    const PLUGIN_VERSION = '3.6.1';
+    const PLUGIN_INFO = array(
+        'name' => 'calendar',
+        'vendor' => 'Gene Hawkins',
+        'version' => self::PLUGIN_VERSION,
+        'license' => 'GPL-3.0',
+        'uri' => 'https://github.com/texxasrulez/calendar',
+    );
+    
+    public $version = self::PLUGIN_VERSION;
 
     public const FREEBUSY_UNKNOWN   = 0;
     public const FREEBUSY_FREE      = 1;
